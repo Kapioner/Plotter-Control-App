@@ -59,6 +59,7 @@ def insertToDatabase(self,shm_name):
                         punkty.append((x, y))
                     except ValueError:
                         print(f"Nieprawidłowy wiersz: {linia.strip()}")
+
         curs_obj = con.cursor()
         curs_obj.execute("SELECT COUNT (id_rysunku) FROM Rysunki")
         row1 = curs_obj.fetchone()
